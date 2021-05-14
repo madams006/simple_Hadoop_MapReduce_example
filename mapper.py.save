@@ -4,16 +4,11 @@ import sys
 # get all lines from stdin
 for line in sys.stdin:
     # remove leading and trailing whitespace
-    line = line.strip().lower()
-    
+    line = line.strip()
+
     # split the line into words; splits on any whitespace
     words = line.split()
 
     # output tuples (word, 1) in tab-delimited format
-    
-    
-    stopword = set(['the', 'and', '.',',',':',';','-','\'','?','!', '\"'])
-
-    for word in words:
-        if word not in  stopword:
-          print '%s\t%s' % (word, "1")
+	 for word in words:
+       		 print '%s\t%s' % (word, "1")
